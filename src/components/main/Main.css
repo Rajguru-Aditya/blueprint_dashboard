@@ -40,7 +40,7 @@ tbody td {
   text-align: center;
 }
 .bg {
-  background: #F5F5F5;
+  background: #f5f5f5;
 }
 
 .foot:hover {
@@ -61,8 +61,20 @@ tfoot td {
   margin: 20px;
 }
 
+.hamburger {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .tables-container {
     justify-content: center;
+  }
+
+  .hamburger {
+    display: block;
+    border: none;
+    margin-top: 20px;
+    outline: none;
+    background-color: transparent;
   }
 }
