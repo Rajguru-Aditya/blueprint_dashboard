@@ -1,10 +1,28 @@
-import React from 'react';
-import { Navbar, Alignment, Button, Classes, Icon, InputGroup } from '@blueprintjs/core';
+import React, { useState } from 'react';
+import {
+  Navbar,
+  Alignment,
+  Button,
+  Classes,
+  Icon,
+  InputGroup,
+  Menu,
+  MenuItem,
+  MenuDivider,
+  Popover,
+  Position,
+} from '@blueprintjs/core';
 import { IconNames } from '@blueprintjs/icons';
 import '@blueprintjs/core/lib/css/blueprint.css';
 import '@blueprintjs/icons/lib/css/blueprint-icons.css';
 
 const Nav = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <div>
       <Navbar className={Classes.DARK} style={{ backgroundColor: '#093f74' }}>
@@ -41,6 +59,30 @@ const Nav = () => {
             <span className="bp4-icon bp4-icon-search"></span>
             <InputGroup className="bp4-input" type="search" placeholder="Search input" dir="auto" />
           </div>
+          <Button className={Classes.MINIMAL} onClick={toggleMobileMenu}>
+            <Icon icon={IconNames.MENU} style={{ color: 'white' }} />
+          </Button>
+          <Popover
+            content={
+              <Menu>
+                <MenuItem icon={IconNames.TAG} text="Tag" />
+                <MenuItem icon={IconNames.KEY} text="Key" />
+                <MenuItem icon={IconNames.PERSON} text="Person" />
+                <MenuItem icon={IconNames.OFFICE} text="Office" />
+                <MenuDivider />
+                <MenuItem icon={IconNames.LOG_OUT} text="Log Out" />
+                <MenuItem icon={IconNames.NOTIFICATIONS} text="Notifications" />
+                <MenuItem icon={IconNames.COG} text="Settings" />
+              </Menu>
+            }
+            position={Position.BOTTOM_RIGHT}
+            isOpen={isMobileMenuOpen}
+            onClose={toggleMobileMenu}
+          >
+            <Button className={Classes.MINIMAL}>
+              <Icon icon={IconNames.MENU} style={{ color: 'white' }} />
+            </Button>
+          </Popover>
         </Navbar.Group>
       </Navbar>
     </div>

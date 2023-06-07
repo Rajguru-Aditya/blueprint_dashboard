@@ -30,14 +30,21 @@ table {
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: #e0ecfc;
   text-align: center;
   padding: 10px;
 }
 
-td {
+tbody td {
   padding: 10px;
   text-align: center;
+}
+.bg {
+  background: #F5F5F5;
+}
+
+.foot:hover {
+  background-color: #e0ecfc;
 }
 
 tfoot td {

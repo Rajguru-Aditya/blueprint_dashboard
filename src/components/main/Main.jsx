@@ -16,11 +16,11 @@ const MainContent = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr className = 'bg'>
                   <td>Invoices</td>
                   <td>Total</td>
                 </tr>
-                <tr>
+                <tr className='foot'>
                   <td>0</td>
                   <td>₹0.00</td>
                 </tr>
@@ -35,11 +35,11 @@ const MainContent = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr className = 'bg'>
                   <td>Receivables</td>
                   <td>Payables</td>
                 </tr>
-                <tr>
+                <tr className='foot'>
                   <td>₹0.00</td>
                   <td>₹0.00</td>
                 </tr>
@@ -54,11 +54,11 @@ const MainContent = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr className = 'bg'>
                   <td>Low Stock</td>
                   <td>Out of stock</td>
                 </tr>
-                <tr>
+                <tr className='foot'>
                   <td>0</td>
                   <td>0</td>
                 </tr>
@@ -73,11 +73,11 @@ const MainContent = () => {
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr className = 'bg'>
                   <td>Today</td>
                   <td>Month</td>
                 </tr>
-                <tr>
+                <tr className='foot'>
                   <td>₹0.00</td>
                   <td>₹0.00</td>
                 </tr>
